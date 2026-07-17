@@ -176,18 +176,19 @@
         /* card2 */
         .code-box{
             background-color: black;
-            padding: 20px ;
-            border-radius: 20px ;
+            padding: 15px ;
+            border-radius: 12px ;
 
         }
         pre{
-            font-size: 16px;
+            font-size: 15px;
             left: 1.6px;
+            line-height: 1.8;
             color: rgb(251, 255, 250);
         }
         .line-no{
             color: #b3aeae;
-            width: 20px;
+            width: 30px;
 
             display: inline-block;
         }
@@ -222,3 +223,49 @@
         .check-green{background-color: green;}
         .check-red{background-color: red;}
 
+        /* Tipbox */
+.tip-box {
+  display: flex;
+  align-items: flex-start; 
+  gap: 16px;               
+  background-color: #fff9e6;
+  border: 1px solid #ffd466;
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+.tip-box-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffcc00;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  
+}
+
+.tip-box-content {
+  display: flex;
+  flex-direction: column; 
+  gap: 8px;               
+}
+
+.tip-box-header {
+  color: #b35900;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.tip-box-text {
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.highlight-blue {
+  color: #007bff;
+  font-weight: bold;
+}
