@@ -1,0 +1,181 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:"Noto Sans Thai",'Segoe UI',Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(139, 213, 255);
+    color: black;
+    line-height: 1.6;
+
+
+}
+
+.container{
+    /* border: 1px solid red;
+    padding: 15px;
+    margin: 15px; */
+}
+
+
+/* Header */
+.site-header{
+    /* border: 1px solid rgb(255, 208, 0); */
+    background: linear-gradient(90deg,rgb(24, 24, 245),rgb(97, 97, 252))
+    ,rgb(12, 176, 241);
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand{
+    /* border: 1px solid rgb(79, 44, 231); */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    color: white;
+
+    padding: 15px;
+    margin: 15px;
+}
+
+.brand-icon{
+    background-color: rgb(255, 253, 147);
+    /* padding: 5px; */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid orangered; 
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-text p {
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+.brand-text h2 {
+    font-size: 26px;
+}
+
+
+.main-nav{
+    /* border: 1px solid rgb(136, 119, 211);
+    padding: 15px;
+    margin: 15px; */
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-list a{
+    color: white;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: all 0.8s;
+}
+
+.nav-list a:hover{
+    background-color: rgb(81, 220, 255);
+}
+
+
+/* Main_body */
+.main-layout{
+    /* border: 1px solid rgb(255, 208, 0);
+    padding: 15px;
+    margin: 15px; */
+    padding: 20px 22px 0;
+
+    display: grid;
+    grid-template-columns: 1fr 390px;
+}
+
+/* Leftcontent */
+.left-content{
+    /* border: 1px solid red;
+    padding: 15px;
+    margin: 15px; */
+
+    display: flex;
+    flex-direction: column;
+}
+/* hero */
+.hero{
+    /* border: 1px solid rgb(1, 4, 138);
+    padding: 15px;
+    margin: 15px; */
+
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr;
+    align-items: center;
+    justify-content: center;
+ 
+    background: linear-gradient(100deg,white,rgb(5, 41, 243));
+
+    border-radius: 12px;
+    padding: 24px 36px;
+    box-shadow: 0 4px 12px rgb(180, 179, 179);
+
+    min-height: 185px;
+}
+
+.hero-text h1{
+    font-size: 36px;
+    color: rgb(3, 3, 138);
+}
+
+.hero-text p{
+    font-size: 26px;
+    color: rgb(47, 47, 248);
+    font-weight: 600px;
+}
+
+
+.hero-photo img{
+    width: 400px;
+    height: 200px;
+
+    /* object-fit: contain; */
+    /* object-fit: fill; */
+    object-fit: cover;
+    border-radius: 20px;
+
+    border: 3px solid rgb(38, 4, 190);
+}
+
+
+/* link example */
+.card{
+
+}
+
+
+
+/* Rightcontent */
+.right-sidebar{border: 1px solid red;
+    padding: 15px;
+    margin: 15px;
+}
+
+
+/* Tipbox */
+.tip-box{
+    border: 1px solid rgb(247, 36, 8);
+    padding: 15px;
+    margin: 15px;
+}
