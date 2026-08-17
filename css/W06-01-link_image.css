@@ -126,8 +126,8 @@ body{
     justify-content: center;
  
     background: linear-gradient(100deg,white,rgb(5, 41, 243));
-
     border-radius: 12px;
+
     padding: 24px 36px;
     box-shadow: 0 4px 12px rgb(180, 179, 179);
 
@@ -159,15 +159,143 @@ body{
 }
 
 
-/* link example */
+/* --link example-- */
 .card{
+ /* border: 1px solid blue; */
+ padding: 15px;
+ margin: 15px; 
+
+ 
+    background: white;
+    border-radius: 12px;
+    
+    padding: 24px 36px;
+    box-shadow: 0 4px 12px rgb(180, 179, 179);
 
 }
 
 
+.card-header-title{
+    /* background-color: red; */
+    color: rgb(3, 3, 138);
+
+    display: flex;
+    gap: 10px;
+
+    align-items: center;
+
+}
+
+
+.card-body-grid{
+    /* background-color: rgb(248, 170, 170); */
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+
+    gap: 15px;
+
+}
+/* กล่องด้านซ้าย\panel ด้านซ้าย */
+.result-panel{
+    border: 1px solid rgb(1, 16, 219);
+    border-radius: 10px;
+
+    /* padding: 10px; */
+    overflow: hidden;
+}
+
+.result-panel-title{
+    background-color: rgb(143, 143, 243);
+
+    padding: 6px 15px;
+    
+}
+
+.result-panel-body{
+    padding: 6px 15px;
+}
+
+.result-panel-body a{
+    display: block;
+
+    color: blue;
+    
+}
+.result-panel-body a:hover{
+    color: rgb(10, 26, 255);
+    text-decoration: none;
+    
+}
+
+.mail-icon{
+    background-color: blue;
+    border-radius: 5px;
+}
+
+.back-btn{
+    border: 2px solid rgb(143, 143, 243);
+    border-radius: 5px;
+
+    display: inline-block !important;
+
+    padding: 2px 15px;
+    margin-top: 10px;
+
+    text-decoration: none;
+}
+
+.code-panel{
+    border: 1px solid rgb(1, 16, 219);
+    border-radius: 10px;
+
+    /* padding: 10px; */
+    overflow: hidden;
+
+    background-color: black;
+}
+
+/* กล่องด้านขวา\panel ด้านขวา */
+.code-panel-body{
+    background-color: black;
+
+    min-height: 145px;
+
+    font-family: 'Courier New', Courier, monospace;
+    size: 15px;
+}
+
+.code-list{
+    color: white;
+    padding: 10px 50px;
+
+}
+.code-list li{
+    padding: 0px 20px;
+
+}
+
+.tag{color: red;}
+.attr{color: rgb(206, 241, 5);}
+.value{color: rgb(2, 255, 35);}
+
+
+/* image example */
+.result-panel-body3g{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 20px;
+
+}
+
+figcaption{
+    font-size: 10px;
+    text-align: center;
+}
+
 
 /* Rightcontent */
-.right-sidebar{border: 1px solid red;
+.right-sidebar{border: 1px solid rgb(235, 64, 11);
     padding: 15px;
     margin: 15px;
 }
