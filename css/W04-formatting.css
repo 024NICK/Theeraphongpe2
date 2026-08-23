@@ -269,3 +269,65 @@
   color: #007bff;
   font-weight: bold;
 }
+
+/* -----footer------ */
+footer {
+  background-color: #0e2a6b;
+  color: #ffffff;
+  padding: 50px 0 20px 0;
+  margin: 0;
+  border: none; /* เอาขอบสีแดงเดิมออก */
+  font-family: Arial, sans-serif;
+}
+
+/*  Layout  Grid  4 colum */
+.footer-container {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/*หัวข้อ Footer */
+.footer-col h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* ข้อความอธิบายในคอลัมน์แรก */
+.footer-col p {
+  font-size: 14px;
+  color: #e0eaf5;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* ลบจุดหน้า List ออก */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 15px;
+}
+
+/* copyright */
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15); /* เส้นกั้นบางๆ */
+  font-size: 13px;
+  color: #e0eaf5;
+}
+
+ <!--copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 Web Development Basics  |  สำหรับใช้ประกอบการเรียนการสอน</p>
+    </div>
+    </footer>
