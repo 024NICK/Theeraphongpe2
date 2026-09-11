@@ -7,47 +7,182 @@
     <meta name="description" content="เว็บไซต์เกี่ยวกับการเรียน" <title>Document</title>
 
     <style>
-        html{
-            scroll-behavior: smooth;
-        }
-    body{
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-        margin: 20px ;
-        padding: 0 ;
-        background-color: rgb(255, 240, 255);
+       ```css
+/* 1. ตั้งค่าพื้นฐาน */
+html {
+    scroll-behavior: smooth;
+}
 
-        line-height: 1.5;
-    }
-    
-        h1{
-            color:rgb(10, 10, 10);
-        }
-        h2{
-            color:rgb(189, 196, 196);
-        }
-        .green-text{
-            color:chartreuse;
-        }
+body {
+    font-family: 'Kanit', Verdana, sans-serif;
+    margin: 0 auto;
+    padding: 40px 30px;
+    max-width: 900px; /* บีบเนื้อหาให้อยู่ตรงกลาง */
+    background-color: #fdf2f8; /* สีพื้นหลังสว่างสบายตา โทนชมพูอ่อน */
+    color: #334155;
+    line-height: 1.7;
+}
 
-        pre{
-            background-color: rgb(206, 224, 241);
-            border-left: 3px solid black;
-            padding: 10px 0 ;
-            font: size 16px;
+/* 2. ตกแต่งหัวข้อ h1 ให้เป็นเหมือนป้าย Banner */
+h1 {
+    background: linear-gradient(135deg, #1d4ed8 0%, #ec4899 100%);
+    color: white !important;
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+    letter-spacing: 1px;
+}
 
-            white-space: pre-wrap;
-            border-radius: 10;
-        }
-        a{
-         text-decoration: none;
-    }
-     a:hover{
-         text-decoration: underline;
-         color: rgb(218, 15, 167);
-    }
-    .text-center{
-        text-align: center;
-    }
+/* ตกแต่งข้อความใต้ h1 */
+body > p:first-of-type {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 40px;
+}
+
+/* 3. ตกแต่งหัวข้อ h2 */
+h2 {
+    color: #db2777 !important; /* บังคับทับ style เดิมใน HTML */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    margin-top: 60px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #fbcfe8;
+}
+
+.green-text {
+    color: #2563eb;
+}
+
+/* 4. ตกแต่งกล่อง Code (<pre>) ให้เป็น Dark Mode */
+pre {
+    background-color: #1e1e2e;
+    color: #d4d4d4;
+    border-left: 5px solid #ec4899;
+    padding: 20px;
+    font-size: 15px;
+    border-radius: 12px;
+    white-space: pre-wrap;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+/* 5. ตกแต่งรายการสารบัญ (ul) ให้เป็นปุ่มกดเรียงกัน */
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 16px;
+    list-style: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+ul li a {
+    display: inline-block;
+    background-color: #f1f5f9;
+    color: #334155;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+ul li a:hover {
+    background-color: #db2777;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(219, 39, 119, 0.3);
+}
+
+/* 6. ตกแต่งลิงก์ทั่วไป */
+a {
+    text-decoration: none;
+    color: #2563eb;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #db2777;
+}
+
+/* 7. ตกแต่งปุ่ม "back to Top" ดักจับเฉพาะลิงก์ที่ href="#top" */
+a[href="#top"] {
+    display: inline-flex;
+    background-color: #fce7f3;
+    color: #9d174d;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+a[href="#top"]:hover {
+    background-color: #fbcfe8;
+    color: #831843;
+}
+
+/* 8. ตกแต่งปุ่ม "workshop" ดักจับลิงก์ที่ไม่ได้ไป #top และอยู่ในหน้าเพจ */
+body > a:not([href="#top"]), 
+body > p > a:not([href="#top"]) {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #bfdbfe;
+}
+
+body > a:not([href="#top"]):hover, 
+body > p > a:not([href="#top"]):hover {
+    background-color: #bfdbfe;
+}
+
+/* เส้นกั้น */
+hr {
+    border: none;
+    height: 1px;
+    background-color: #fbcfe8;
+    margin: 40px 0;
+}
+
+/* Footer (คลาส text-center) */
+.text-center {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
+}
+
+.text-center a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1d4ed8;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+    background: none;
+}
+
     </style>
 </head>
 
