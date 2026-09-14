@@ -5,71 +5,77 @@
 }
 
 :root {
-  /* สีหลักเว็บไซต์ */
-  --primary-color: rgb(55, 206, 55);
-  --primary-dark-color: rgb(30, 87, 30);
-  --seconary-color: rgb(3, 3, 54);
+  /* สีหลักเว็บไซต์ (โทนชมพูหวานละมุน) */
+  --primary-color: #ec4899;
+  --primary-dark-color: #9d174d;
+  --seconary-color: #831843;
 
   /* สีข้อความ */
-  --sub-text-color: grey;
-  --nav-text-color: rgb(39, 38, 38);
-  --light-text-color: white;
+  --sub-text-color: #854d0e;
+  --sub-text-muted: #71717a;
+  --nav-text-color: #475569;
+  --light-text-color: #ffffff;
+
   /* สีพื้นหลัง */
-  --header-bg-color: rgb(235, 255, 217);
-  --light-bg-color: white;
-  --footer-bg-color: rgb(23, 139, 23);
+  --header-bg-color: rgba(253, 242, 248, 0.9);
+  --light-bg-color: #ffffff;
+  --footer-bg-color: #831843;
+
   /* สีเงา */
-  --header-shadow: 0 4px 10px rgb(151, 151, 151);
-  --card-shadow: 0 3px 10px rgb(151, 151, 151);
+  --header-shadow: 0 4px 20px rgba(236, 72, 153, 0.08);
+  --card-shadow: 0 4px 14px rgba(244, 114, 182, 0.12);
 }
 
 html {
   scroll-behavior: smooth;
-  /* ถ้าอยากเปลี่ยนขนาดของ rem ต้องเปลี่ยน ขนาดตัวอะกษร */
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Sarabun", "Times New Roman", Times, serif;
   line-height: 1.6;
 
+  /* เปลี่ยน Background Gradient เป็นโทนชมพูนมอ่อนละมุน */
   background: linear-gradient(
     135deg,
-    white 10%,
-    rgb(4, 214, 56) 30%,
-    rgb(217, 242, 245) 10%
+    #fff5f7 0%,
+    #fce7f3 50%,
+    #fdf2f8 100%
   );
+  color: #334155;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* header */
 .header {
-  background-color: rgba(210, 255, 151, 0.89);
-  box-shadow: 0px 3px 10px rgb(151, 151, 151);
+  background-color: var(--header-bg-color);
+  box-shadow: var(--header-shadow);
 
   position: sticky;
   top: 0;
-  z-index: 1;
-  backdrop-filter: blur(10);
+  z-index: 10;
+  backdrop-filter: blur(8px);
 }
 
 .header-content {
   text-align: center;
-
   padding-block: 2rem;
 }
 
 .header-title {
   color: var(--primary-color);
   font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
 }
 
 .header-subtitle {
-  color: var(--sub-text-color);
+  color: var(--sub-text-muted);
 }
+
 /* Navbar */
 nav {
   text-align: center;
@@ -80,43 +86,44 @@ nav a {
   text-decoration: none;
 
   color: var(--nav-text-color);
-  background: rgb(236, 235, 235);
+  background: #ffffff;
   padding: 0.65rem 1.2rem;
   margin: 0.3rem;
 
   border-radius: 8px;
-  box-shadow: var(--card-shadow);
+  box-shadow: 0 2px 8px rgba(244, 114, 182, 0.1);
 
   display: inline-block;
   cursor: pointer;
 
-  transition:
-    transform 0.2s,
-    box-shadow 0.3s;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
 
   user-select: none;
 }
 
 nav a:hover {
-  transform: translateY(-5px);
-  box-shadow: gray;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(236, 72, 153, 0.25);
+  background-color: #fdf2f8;
+  color: var(--primary-color);
 }
 
 nav a.active {
   color: var(--light-text-color);
-  background-color: var(--seconary-color);
+  background-color: var(--primary-color);
 }
 
 /* Main */
 
 .page-title {
-  text-align: center; /*ทำให้textอยู่ตรงกลาง*/
+  text-align: center;
+  color: var(--primary-dark-color);
+  margin-block: 1.5rem;
 }
 
 .pet-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   gap: 1.5rem;
 }
 
@@ -131,17 +138,17 @@ nav a.active {
   border-radius: 0.75rem;
   overflow: hidden;
 
-  transition: tranform 0.25s;
+  transition: transform 0.25s, box-shadow 0.25s;
 }
 
 .pet-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(236, 72, 153, 0.18);
 }
 
 .pet-card img {
   height: 16.25rem;
   width: 100%;
-
   object-fit: cover;
 }
 
@@ -154,9 +161,8 @@ nav a.active {
 }
 
 .breed {
-  color: var(--sub-text-color);
+  color: var(--sub-text-muted);
 }
-
 
 /* card แนะนำ */
 .info-section {
@@ -170,17 +176,15 @@ nav a.active {
 .info-title {
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--nav-text-color);
+  color: var(--primary-dark-color);
 }
 
-/* จัดการ Grid ให้เรียง 4 คอลัมน์ */
 .info-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
-/* จัดการรูปแบบการ์ดแต่ละใบ */
 .info-card {
   padding: 1.5rem 1.25rem;
   border-radius: 0.5rem;
@@ -193,38 +197,37 @@ nav a.active {
 
 .info-card p {
   font-size: 0.9rem;
-  color: var(--sub-text-color);
+  color: var(--sub-text-muted);
 }
 
-/* สีพื้นหลังและสีตัวอักษรหัวข้อของการ์ดแต่ละสี */
+/* ปรับสีการ์ดข้อมูลให้เข้ากับธีมชมพูหวาน */
 .info-blue {
-  background-color: #e0f2fe; 
+  background-color: #f0f9ff;
 }
 .info-blue h3 {
-  color: #1e40af;
+  color: #0284c7;
 }
 
 .info-purple {
-  background-color: #f3e8ff; 
+  background-color: #fce7f3;
 }
 .info-purple h3 {
-  color: #6b21a8;
+  color: #be185d;
 }
 
 .info-green {
-  background-color: #dcfce7; 
+  background-color: #f0fdf4;
 }
 .info-green h3 {
-  color: #166534;
+  color: #16a34a;
 }
 
 .info-orange {
-  background-color: #ffedd5; 
+  background-color: #fff7ed;
 }
 .info-orange h3 {
-  color: #9a3412;
+  color: #ea580c;
 }
-
 
 /* Footer */
 footer {
@@ -232,5 +235,5 @@ footer {
   background-color: var(--footer-bg-color);
   text-align: center;
   color: var(--light-text-color);
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
