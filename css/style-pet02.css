@@ -134,21 +134,34 @@ body {
   display: none;
 }
 
-#filter-all::checked ~ main .title-all,
-#filter-dog::checked ~ main .title-all,
-#filter-cat::checked ~ main .title-all,
-#filter-bird::checked ~ main .title-all,
-#filter-fish::checked ~ main .title-all,
-#filter-small-pet::checked ~ main .title-all
+/* ตั้งค่าให้แสดงเฉพาะหมวดหมู่ที่ตรงกับปุ่มที่ถูกเลือก */
+#filter-all:checked ~ main .title-all,
+#filter-dog:checked ~ main .title-dog,
+#filter-cat:checked ~ main .title-cat,
+#filter-bird:checked ~ main .title-bird,
+#filter-fish:checked ~ main .title-fish,
+#filter-small-pet:checked ~ main .title-small-pet {
+  display: inline; 
+}
 
-/* ซ่อนแสดงภาพสัตว์ */
-#filter-dog::checked ~ main .pet-card{
+#filter-dog:checked ~ main .pet-card,
+#filter-cat:checked ~ main .pet-card,
+#filter-bird:checked ~ main .pet-card,
+#filter-fish:checked ~ main .pet-card,
+#filter-small-pet:checked ~ main .pet-card
+{
   display: none;
 }
 
-#filter-dog::checked ~ main .pet-dog{
+#filter-dog:checked ~ main .pet-dog,
+#filter-cat:checked ~ main .pet-cat,
+#filter-bird:checked ~ main .pet-bird,
+#filter-fish:checked ~ main .pet-fish,
+#filter-small-pet:checked ~ main .pet-small
+{
   display: block;
 }
+
 
 /* Main */
 
